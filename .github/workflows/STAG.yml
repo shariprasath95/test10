@@ -17,7 +17,7 @@ jobs:
         uses: ./
         env:
           target: STAG
-      - run: cd ansible
-        shell: bash
-      - run: ansible-playbook -i inventry.txt -e STAG deploy.yml
+      # - run: cd ansible
+      #   shell: bash
+      - run: cd ansible && ansible-playbook -i inventry.txt -e STAG deploy.yml
         shell: bash
