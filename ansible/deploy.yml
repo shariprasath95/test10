@@ -1,13 +1,13 @@
 ---
 - name: Ansible Copy Directory Example Local to Remote
-  hosts: ${{ env.target }}
+  hosts: STAG
   tasks:
     - name: sync
       synchronize:
         src: ../custom_addons/
-        dest: ${{target}}-custom-addons
+        dest: STAG-custom-addons
         delete: yes
         recursive: yes
 
-    - name: restart ${{target}}
-      command: echo ${{target}} passed
+    # - name: restart ${{target}}
+    #   command: echo ${{target}} passed

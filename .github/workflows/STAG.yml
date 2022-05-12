@@ -15,9 +15,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Execute Ansible Playbook
         uses: ./
-        env:
-          target: STAG
+        # env:
+        #   target: STAG
       # - run: cd ansible
       #   shell: bash
-      - run: cd ansible && ansible-playbook -i inventry.txt -e ${{ env.target }} deploy.yml
+      - run: cd ansible && ansible-playbook -i inventry.txt -e STAG deploy.yml
         shell: bash
