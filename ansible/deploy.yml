@@ -1,6 +1,6 @@
 ---
 - name: Ansible Copy Directory Example Local to Remote
-  hosts: ${{target}}
+  hosts: ${{ env.target }}
   tasks:
     - name: sync
       synchronize:
