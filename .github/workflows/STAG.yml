@@ -19,5 +19,5 @@ jobs:
           target: STAG
       - run: cd ansible
         shell: bash
-      - run: ansible-playbook -i inventry.txt -e $target deploy.yml
+      - run: ansible-playbook -i inventry.txt -e target=${{env.target}} deploy.yml
         shell: bash
