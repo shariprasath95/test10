@@ -1,0 +1,8 @@
+---
+# ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+ansible_connection: ssh
+ansible_host: 99.79.7.166
+ansible_port: 22
+ansible_user: STAG
+ansible_ssh_pass: 'VdEuBNcDIwggV2o1TTObsd#$TniaYj4='
+ansible_python_interpreter: /usr/bin/python3

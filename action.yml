@@ -1,0 +1,7 @@
+name: 'gulffruits'
+description: 'Run Ansible Playbook'
+runs:
+  using: "composite"
+  steps:
+    - run: echo Run Ansible Playbook Pipeline
+      shell: bash

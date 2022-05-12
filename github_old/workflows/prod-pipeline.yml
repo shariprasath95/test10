@@ -1,0 +1,24 @@
+name: gulffruits
+
+on:
+  push:
+    branches:
+      - PROD
+  pull_request:
+
+
+jobs:
+  deploy_staging:
+    runs-on: self-hosted
+    name: Run Ansible Playbook
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Execute Ansible Playbook
+        uses: ./
+        env:
+          target: PROD
+      - run: cd ansible
+        shell: bash
+      - run: ansible-playbook -e target=${{env.target}} -i inventry.txt deploy.yml
+        shell: bash

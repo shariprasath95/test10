@@ -1,0 +1,13 @@
+---
+- name: Ansible Copy Directory Example Local to Remote
+  hosts: ${{target}}
+  tasks:
+    - name: sync
+      synchronize:
+        src: ../custom_addons/
+        dest: ${{target}}-custom-addons
+        delete: yes
+        recursive: yes
+
+    - name: restart ${{target}}
+      command: echo ${{target}} passed
