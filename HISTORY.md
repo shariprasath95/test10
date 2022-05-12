@@ -14,7 +14,8 @@ tar xzf ./actions-runner-linux-x64-2.291.tar.gz
 ./run.sh
 
 # Ansible Install
-sudo apt install python3-pip
+sudo apt update
+sudo apt install python3-pip -y
 sudo python3 -m pip install ansible
 
 # User creation
