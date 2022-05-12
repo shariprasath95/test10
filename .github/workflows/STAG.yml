@@ -3,7 +3,7 @@ name: gulffruits STAG
 on:
   push:
     branches:
-      - STAG
+      - main
   pull_request:
 
 jobs:
@@ -19,5 +19,5 @@ jobs:
           target: STAG
       - run: cd ansible
         shell: bash
-      - run: ansible-playbook -e ${{env.target}} -i inventry.txt deploy.yml
+      - run: ansible-playbook -e $target -i inventry.txt deploy.yml
         shell: bash
