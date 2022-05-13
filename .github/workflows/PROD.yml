@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - PROD
-  pull_request:
+  # pull_request:
+    tags:
+      - ansible
+      - custom_addons
+      - action.yml
 
 jobs:
   deploy_staging:

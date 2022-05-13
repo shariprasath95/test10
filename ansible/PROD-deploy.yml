@@ -5,7 +5,7 @@
     - name: sync
       synchronize:
         src: ../custom_addons/
-        dest: PROD-custom-addons
+        dest: /opt/custom_addons
         delete: yes
         recursive: yes
 
