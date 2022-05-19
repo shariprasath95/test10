@@ -3,7 +3,7 @@ name: gulffruits PROD
 on:
   push:
     branches:
-      - PROD
+      - production
   # pull_request:
     tags:
       - ansible

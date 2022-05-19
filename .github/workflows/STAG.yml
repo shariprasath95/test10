@@ -3,7 +3,7 @@ name: gulffruits STAG
 on:
   push:
     branches:
-      - STAG
+      - staging
   pull_request:
 
 jobs:
